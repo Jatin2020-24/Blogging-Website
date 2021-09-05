@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('{{url_for('static', filename='assets/img/home-bg.jpg')}} ')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>Admin Panel</h1>
+                    <span class="subheading">Manage your posts and save them.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+
+            <h2>Basic Actions</h2>
+            <a href="/dashboard"><button class="btn btn-primary text-uppercase" type="submit">Dashboard Home</button></a>
+            
+            <a href="/logout"><button class="btn btn-primary text-uppercase" type="submit">Logout</button></a>
+            <hr>
+            <h1>Add/Edit Post</h1>
+            <form id="contactForm" action="/addPost/{{sno}}" method="post" novalidate>
+                <div class="form-floating">
+                    <input class="form-control" id="title" type="text" name="title" , placeholder="title"
+                        >
+                    <label for="title">Title</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="tagline" type="text" name="tagline" , placeholder="Tagline"
+                        >
+                    <label for="tagline">Tagline</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="slug" type="text" name="slug" , placeholder="Slug"
+                        >
+                    <label for="slug">Slug</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" id="content" name="content" , placeholder="Content"
+                        style="height: 12rem"></textarea>
+                    <label for="content">Content</label>
+                </div>
+                <div class="form-floating">
+                    <input class="form-control" id="img_file" name="img_file" , placeholder="Image File"
+                        >
+                    <label for="img_file">Image File</label>
+                </div>
+                <br />
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <!-- Submit Button-->
+                <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

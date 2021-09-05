@@ -1,0 +1,18 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/codingthunder",
+    "prod_uri": "mysql://root:@localhost/codingthunder",
+    "fb_url": "https://www.facebook.com",
+    "gh_url": "https://www.github.com",
+    "tw_url": "https://www.twitter.com",
+    "blog_name": "Coding Thunder",
+    "sub_heading": "A blog by Jatin Jain",
+    "about_text": "Hi I am Jatin Jain. I am 2nd year student of UIET, Panjab University, Chandigarh. I like to code in Python.",
+    "no_of_posts": "5",
+    "admin_user": "jatin",
+    "admin_pass": "jatin123",
+    "upload_location": "D:\\Harry"
+  }
+}
